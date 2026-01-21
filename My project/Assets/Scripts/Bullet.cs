@@ -37,6 +37,8 @@ public class Bullet : MonoBehaviour
 
             //본인(Enemy) 삭제
             Destroy(gameObject);
+
+            GameManager.Instance.AddScore(100);
         }
         /*위와 동일한 기능
         if (collision.gameObject.tag == "Bullet") {
