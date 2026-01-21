@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
     {
         score += num;
         scoreText.text = "Score : " + score; //텍스트에 반영
+
+        if(score > 1000)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
 
